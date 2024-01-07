@@ -1,0 +1,13 @@
+# config.py
+
+# Base URL for SpaceTraders.io API
+base_url = "https://api.spacetraders.io/v2"
+
+# Token
+token = "put your token here"
+
+# Headers for API requests
+headers = {"Authorization": f"Bearer {token}"}
+
+# Current API version
+api_version = "v2.1.4"

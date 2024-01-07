@@ -1,0 +1,13 @@
+{
+    "error": {
+      "message": "Ship is currently in-transit from X1-TX89-B7 to X1-TX89-BZ5C and arrives in 290 seconds.",
+      "code": 4214,
+      "data": {
+        "departureSymbol": "X1-TX89-B7",
+        "destinationSymbol": "X1-TX89-BZ5C",
+        "arrival": "2023-11-23T01:49:21.898Z",
+        "departureTime": "2023-11-23T01:44:23.898Z",
+        "secondsToArrival": 290
+      }
+    }
+  }

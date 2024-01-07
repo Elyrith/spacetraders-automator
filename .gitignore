@@ -1,0 +1,6 @@
+/config.py
+*.log
+*.pyc
+
+# Ignore cache files
+_cache/*
