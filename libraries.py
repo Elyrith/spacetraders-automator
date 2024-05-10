@@ -1,6 +1,6 @@
-import datetime
 import json
 import time
+from datetime import datetime, timezone
 
 import api.contracts as contracts
 import api.ships as ships
@@ -105,11 +105,8 @@ def get_list_of_active_contracts():
     # Get all contracts/missions we have
     contract_list = contracts.list_contracts()['data']
 
-    # Get the current datetime
-    current_datetime = datetime.datetime.utcnow()
-
     # Remove all fulfilled and expired contracts
-    current_datetime = datetime.datetime.utcnow()
+    current_datetime = datetime.now(tz=timezone.utc)
     current_contracts = [
         contract for contract in contract_list
         if contract.get('accepted') is True
@@ -184,7 +181,7 @@ def deliver_mission_items(ship, items):
     contract_list = contracts.list_contracts()['data']
 
     # Remove all fulfilled and expired contracts
-    current_datetime = datetime.datetime.utcnow()
+    current_datetime = datetime.now(tz=timezone.utc)
     contract_list = [
         cmd for cmd in contract_list 
         if not (cmd.get('fulfilled', False) or 
